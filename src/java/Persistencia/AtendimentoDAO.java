@@ -51,6 +51,29 @@ public class AtendimentoDAO {
         st.close();       
     }
     
+    public void verAtendimento(HttpServletRequest request) throws Exception{
+        String sql = "select * from atendimento;";
+        PreparedStatement st = criaStatement(sql);
+        ResultSet res = st.executeQuery();
+        
+        List<Atendimento> atendimentos = new ArrayList<Atendimento>();
+        
+        while(res.next()) {
+            int id = res.getInt("id");
+            String perito = res.getString("perito");
+            Date data = res.getDate("data");
+            String descricao = res.getString("descricao");
+           
+            atendimentos.add(new Atendimento(id, perito, data, descricao));
+        }
+         
+        st.getConnection().close();
+        st.close();
+        
+        HttpSession sessao = request.getSession();
+        sessao.setAttribute("Atendido", atendimentos);
+    }
+    
     private PreparedStatement criaStatement(String sql) throws Exception {
         String url = "jdbc:mysql://localhost/sgp";
         String user = "root";

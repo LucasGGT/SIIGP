@@ -1,26 +1,28 @@
 package Model;
 
 public class Pericia {
-    private String perito;
-    private String codigo;
+    private int id;
+    private String nome;
+     private String descricao;
     private String conclusao;
     private String local;
-    private String descricao;
+   
     
-    public Pericia(String perito, String codigo, String conclusao, String local, String descricao) {
-        this.perito = perito;
-        this.codigo = codigo;
+    public Pericia(int id, String nome, String conclusao, String local, String descricao) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
         this.conclusao = conclusao;
         this.local = local;
-        this.descricao = descricao;
+        
     }
 
-    public String getPerito() {
-        return perito;
+    public String getNome() {
+        return nome;
     }
 
-    public void setPerito(String perito) {
-        this.perito = perito;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getConclusao() {
