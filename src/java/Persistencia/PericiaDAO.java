@@ -33,7 +33,7 @@ public class PericiaDAO {
         st.close();
         
         HttpSession sessao = request.getSession();
-        sessao.setAttribute("Pericia", pericias);
+        sessao.setAttribute("Pericias", pericias);
     }
  
     public void setPericia(String nome, String descricao, String conclusao, String local) throws Exception {

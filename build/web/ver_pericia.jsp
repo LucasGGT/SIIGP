@@ -23,7 +23,7 @@
         <h2>Visualização de Pericias</h2>
         
        <h1>Pericias</h1>
-        <h2>Quantidade de pericias ${Pericia.size()}</h2>
+        <h2>Quantidade de pericias ${Pericias.size()}</h2>
 
         <br /> <br />
         
@@ -38,7 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${pericias}" var="Pericia">
+                <c:forEach items="${Pericias}" var="Pericia">
                     <tr>
                         <td>${Pericia.id}</td>
 

@@ -3,7 +3,7 @@ package Model;
 public class Pericia {
     private int id;
     private String nome;
-     private String descricao;
+    private String descricao;
     private String conclusao;
     private String local;
    
@@ -15,6 +15,10 @@ public class Pericia {
         this.conclusao = conclusao;
         this.local = local;
         
+    }
+    
+    public int getId() {
+        return id;
     }
 
     public String getNome() {

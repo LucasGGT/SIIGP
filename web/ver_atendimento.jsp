@@ -20,7 +20,7 @@
             <p>(Em desenvolvimento)</p>
         </div>
          <h1>Atendimentos</h1>
-        <h2>Quantidade de atendimentos: ${atendimento.size()}</h2>
+        <h2>Quantidade de atendimentos: ${Atendimentos.size()}</h2>
 
         <br /> <br />
         
@@ -34,7 +34,7 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${atendimentos}" var="atendimento">
+                <c:forEach items="${Atendimentos}" var="atendimento">
                     <tr>
                         <td>${atendimento.codigo}</td>
 

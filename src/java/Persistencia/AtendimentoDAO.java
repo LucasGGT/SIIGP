@@ -34,7 +34,7 @@ public class AtendimentoDAO {
         st.close();
         
         HttpSession sessao = request.getSession();
-        sessao.setAttribute("atendimentos", atendimentos);
+        sessao.setAttribute("Atendimentos", atendimentos);
     }
  
     public void setAtendimento(String perito, String data, String descricao) throws Exception {

@@ -5,7 +5,10 @@
         <group>
             <file>file:/C:/Users/6833381/Documents/SIIGP/src/java/Persistencia/AtendimentoDAO.java</file>
             <file>file:/C:/Users/6833381/Documents/SIIGP/src/java/Model/Atendimento.java</file>
-            <file>file:/C:/Users/6833381/Documents/SIIGP/src/java/Control/commands/verAtendimento.java</file>
+            <file>file:/C:/Users/6833381/Documents/SIIGP/web/ver_pericia.jsp</file>
+            <file>file:/C:/Users/6833381/Documents/SIIGP/src/java/Persistencia/PericiaDAO.java</file>
+            <file>file:/C:/Users/6833381/Documents/SIIGP/src/java/Model/Pericia.java</file>
+            <file>file:/C:/Users/6833381/Documents/SIIGP/src/java/Model/Perito.java</file>
         </group>
     </open-files>
 </project-private>
