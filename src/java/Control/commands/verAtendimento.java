@@ -2,6 +2,7 @@ package Control.commands;
 
 import Control.Command;
 import Model.Atendimento;
+import Persistencia.AtendimentoDAO;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -12,10 +13,14 @@ public class verAtendimento implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        
+        AtendimentoDAO dao = new AtendimentoDAO();
+        dao.getAtendimentos(request);
+        
         return "ver_atendimento.jsp";
     }
     
-        private Collection<Atendimento> getAtendimento(HttpServletRequest request) {
+    private Collection<Atendimento> getAtendimento(HttpServletRequest request) {
         HttpSession sessao = request.getSession();
         Collection<Atendimento> atendimento = (Collection<Atendimento>)sessao.getAttribute("atendimento");
         

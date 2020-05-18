@@ -23,7 +23,7 @@ public class AtendimentoDAO {
         
         while(res.next()) {
             int id = res.getInt("id");
-            String nome = res.getString("nome");
+            String nome = res.getString("perito");
             Date data = res.getDate("data");
             String desc = res.getString("descricao");
             

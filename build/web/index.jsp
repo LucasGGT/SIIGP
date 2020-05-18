@@ -12,6 +12,8 @@
                 <ul>
                     <li><a href="Servlet?acao=CadastroAtendimento">Cadastro de atendimento</a></li>
                     <li><a href="Servlet?acao=CadastroPericia">Cadastro de perícia</a></li>
+                    <li><a href="Servlet?acao=verAtendimento">Ver atendimento</a></li>
+                    <li><a href="Servlet?acao=verPericia">Ver perícia</a></li>
                 </ul>
             </nav>
             <p>(Em desenvolvimento)</p>

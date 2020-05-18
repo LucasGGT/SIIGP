@@ -6,7 +6,6 @@ public class Atendimento {
     private int codigo;
     private String perito;
     private Date dataCadastro;
-    private String codCrime;
     private String descricao;
     
     public Atendimento(int id, String p, Date data, String descricao) {
@@ -15,7 +14,14 @@ public class Atendimento {
         this.dataCadastro = data;
         this.descricao = descricao;
     }
-
+    public int getCodigo() {
+        return codigo;
+    }
+    
+    public void setCodigo(int id) {
+        this.codigo = id;
+    }
+    
     public String getPerito() {
         return perito;
     }
