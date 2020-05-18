@@ -1,20 +1,39 @@
 package Persistencia;
 
-import Model.Atendimento;
+
+import Model.Pericia;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import javax.security.auth.message.callback.PrivateKeyCallback;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class PericiaDAO {
-    public void getPericias() throws Exception {       
-        //Implementar
+    public void getPericias(HttpServletRequest request) throws Exception {       
+        String sql = "select * from pericia;";
+        PreparedStatement st = criaStatement(sql);
+        ResultSet res = st.executeQuery();
+        
+        List<Pericia> pericias = new ArrayList<Pericia>();
+        
+        while(res.next()) {
+            int id = res.getInt("id");
+            String nome = res.getString("nome");
+            String descricao = res.getString("descricao");
+            String conclusao = res.getString("conclusao");
+            String local = res.getString("local");
+           
+            pericias.add(new Pericia(id, nome, descricao, conclusao, local));
+        }
+         
+        st.getConnection().close();
+        st.close();
+        
+        HttpSession sessao = request.getSession();
+        sessao.setAttribute("Pericias", pericias);
     }
  
     public void setPericia(String nome, String descricao, String conclusao, String local) throws Exception {
@@ -30,6 +49,10 @@ public class PericiaDAO {
 
         st.getConnection().close();
         st.close();       
+    }
+    
+        public void verPericia(HttpServletRequest request) throws Exception{
+
     }
     
     private PreparedStatement criaStatement(String sql) throws Exception {
