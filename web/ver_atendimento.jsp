@@ -36,11 +36,11 @@
             <tbody>
                 <c:forEach items="${atendimentos}" var="atendimento">
                     <tr>
-                        <td>${atendimento.id}</td>
+                        <td>${atendimento.codigo}</td>
 
                         <td>${atendimento.perito}</td>
 
-                        <td>${atendimento.data}</td>
+                        <td>${atendimento.dataCadastro}</td>
                         
                         <td>${atendimento.descricao}</td>
                         
