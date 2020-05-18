@@ -44,6 +44,17 @@
                         
                         <td>${atendimento.descricao}</td>
                         
+<<<<<<< HEAD
+=======
+                        <td>
+                            <form action="Servlet" method="post">
+                                <input type="hidden" name="acao" value="pagEditarAtendimento" />
+                                <input type="number" name="atendimentoID" placeholder="ID" hidden="true" value="${atendimento.codigo}"/>
+                                <input type="submit" placeholder="Editar" value="Editar"/>                         
+                            </form> 
+                        </td>
+
+>>>>>>> MatheusFrech-patch-1
                     </tr>
                 </c:forEach>
             </tbody>

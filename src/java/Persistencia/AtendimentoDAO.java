@@ -51,6 +51,21 @@ public class AtendimentoDAO {
         st.close();       
     }
     
+    
+    public void editarAtendimento(String perito, String data, String descricao, String id) throws Exception {
+        String sql = "UPDATE atendimento SET perito = ?, data = ?, descricao = ? WHERE id = ? ";     
+        PreparedStatement st = criaStatement(sql);
+        st.setString(1, perito);
+        st.setString(2, data);
+        st.setString(3, descricao);
+        st.setString(4, id);
+
+        st.execute();
+
+        st.getConnection().close();
+        st.close();    
+    }
+    
     public void verAtendimento(HttpServletRequest request) throws Exception{
         String sql = "select * from atendimento;";
         PreparedStatement st = criaStatement(sql);
