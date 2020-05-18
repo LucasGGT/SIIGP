@@ -44,6 +44,14 @@
                         
                         <td>${atendimento.descricao}</td>
                         
+                        <td>
+                            <form action="Servlet" method="post">
+                                <input type="hidden" name="acao" value="pagEditarAtendimento" />
+                                <input type="number" name="atendimentoID" hidden="true" value="${atendimento.codigo}"/>
+                                <input type="submit" placeholder="Editar" value="Editar"/>
+                            <form/>
+                        </td>
+                        
                     </tr>
                 </c:forEach>
             </tbody>

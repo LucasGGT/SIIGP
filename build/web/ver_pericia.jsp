@@ -20,8 +20,6 @@
             <p>(Em desenvolvimento)</p>
         </div>
         
-        <h2>Visualização de Pericias</h2>
-        
        <h1>Pericias</h1>
         <h2>Quantidade de pericias ${Pericias.size()}</h2>
 
