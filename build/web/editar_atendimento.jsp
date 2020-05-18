@@ -25,7 +25,7 @@
             <p>(Em desenvolvimento)</p>
         </div>
         
-        <h2>Editar Atendimento</h2>
+        <h2>Editar Atendimento: ${atendimentoID}</h2>
         
         <form action="Servlet" method="post">
             <input type="hidden" name="acao" value="EditarAtendimento" />
@@ -35,7 +35,7 @@
             <input id="date" type="date" name="date" > <br /> <br />
             <label for="descricao">Descrição: </label>
             <input type="text" name="descricao" placeholder="Descrição" /> <br /> <br />
-            <input type="submit" placeholder="Criar" value="Criar"/>
+            <input type="submit" placeholder="Editar" value="Editar"/>
         </form>
         
     </body>
