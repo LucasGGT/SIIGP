@@ -22,6 +22,5 @@ public class pagEditarAtendimento implements Command{
         HttpSession sessao = request.getSession();
         sessao.setAttribute("atendimentoID", request.getParameter("atendimentoID"));   
         return "editar_atendimento.jsp";
-    }
-    
+    }   
 }

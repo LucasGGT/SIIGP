@@ -16,7 +16,7 @@
         <div>
             <nav>
                 <ul>
-                    <li><a href="Servlet?acao=CadastroAtendimento">Cadastro de atendimento</a></li>
+                    <li><a href="Servlet?acao=EscolherPericia">Cadastro de atendimento</a></li>
                     <li><a href="Servlet?acao=CadastroPericia">Cadastro de perícia</a></li>
                     <li><a href="Servlet?acao=verAtendimento">Ver atendimento</a></li>
                     <li><a href="Servlet?acao=verPericia">Ver perícia</a></li>

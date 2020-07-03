@@ -21,16 +21,4 @@ public class verAtendimento implements Command {
         return "ver_atendimento.jsp";
     }
     
-    private Collection<Atendimento> getAtendimento(HttpServletRequest request) {
-        HttpSession sessao = request.getSession();
-        Collection<Atendimento> atendimento = (Collection<Atendimento>)sessao.getAttribute("atendimento");
-        
-        if(atendimento == null) {
-            atendimento = new ArrayList<Atendimento>();
-            sessao.setAttribute("atendimento", atendimento);
-        }
-        
-        return atendimento;
-    }
-    
 }

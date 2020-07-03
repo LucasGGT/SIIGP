@@ -19,39 +19,41 @@
             </nav>
             <p>(Em desenvolvimento)</p>
         </div>
-         <h1>Atendimentos</h1>
-        <h2>Quantidade de atendimentos: ${Atendimentos.size()}</h2>
+        
 
+        <h2>Cadastro de Atendimento</h2>
+
+       <h1>Escolha uma Pericias</h1>
         <br /> <br />
         
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Id da Pericia</th>
-                    <th>Perito</th>
-                    <th>Data</th>
+                    <th>Nome</th>
                     <th>Descricao</th>
+                    <th>Conclusao</th>
+                    <th>Local</th>
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${Atendimentos}" var="atendimento">
+                <c:forEach items="${Pericias}" var="Pericia">
                     <tr>
-                        <td>${atendimento.id}</td>
-                        
-                        <td>${atendimento.pericia_id}</td>     
-                      
-                        <td>${atendimento.perito}</td>
+                        <td>${Pericia.id}</td>
 
-                        <td>${atendimento.data}</td>
+                        <td>${Pericia.nome}</td>
+
+                        <td>${Pericia.descricao}</td>
                         
-                        <td>${atendimento.descricao}</td>
+                        <td>${Pericia.conclusao}</td>
                         
+                        <td>${Pericia.local}</td>
+                                                
                         <td>
                             <form action="Servlet" method="post">
-                                <input type="hidden" name="acao" value="pagEditarAtendimento" />
-                                <input type="number" name="atendimentoID" placeholder="ID" hidden="true" value="${atendimento.id}"/>
-                                <input type="submit" placeholder="Editar" value="Editar"/>                         
+                                <input type="hidden" name="acao" value="CadastroAtendimento" />
+                                <input type="number" name="periciaID" placeholder="ID" hidden="true" value="${Pericia.id}"/>
+                                <input type="submit" placeholder="Selecionar" value="Selecionar"/>                         
                             </form> 
                         </td>
                         
@@ -59,8 +61,6 @@
                 </c:forEach>
             </tbody>
         </table>
-       
-         
         
     </body>
 </html>

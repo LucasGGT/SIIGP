@@ -23,11 +23,12 @@ public class AtendimentoDAO {
         
         while(res.next()) {
             int id = res.getInt("id");
+            int pericia_id = res.getInt("pericia_id");
             String nome = res.getString("perito");
             Date data = res.getDate("data");
             String desc = res.getString("descricao");
             
-            atendimentos.add(new Atendimento(id, nome, data, desc));
+            atendimentos.add(new Atendimento(id, pericia_id, nome, data, desc));
         }
          
         st.getConnection().close();
@@ -37,13 +38,14 @@ public class AtendimentoDAO {
         sessao.setAttribute("Atendimentos", atendimentos);
     }
  
-    public void setAtendimento(String perito, String data, String descricao) throws Exception {
-        String sql = "insert into atendimento(perito, data, descricao) values(?, ?, ?)";       
+    public void setAtendimento(String pericia_id,String perito, String data, String descricao) throws Exception {
+        String sql = "insert into atendimento(pericia_id, perito, data, descricao) values(?, ?, ?, ?)";       
                 
         PreparedStatement st = criaStatement(sql);
-        st.setString(1, perito);
-        st.setString(2, data);
-        st.setString(3, descricao);
+        st.setString(1, pericia_id);
+        st.setString(2, perito);
+        st.setString(3, data);
+        st.setString(4, descricao);
 
         st.execute();
 
@@ -75,11 +77,12 @@ public class AtendimentoDAO {
         
         while(res.next()) {
             int id = res.getInt("id");
+            int pericia_id = res.getInt("pericia_id");
             String perito = res.getString("perito");
             Date data = res.getDate("data");
             String descricao = res.getString("descricao");
            
-            atendimentos.add(new Atendimento(id, perito, data, descricao));
+            atendimentos.add(new Atendimento(id, pericia_id, perito, data, descricao));
         }
          
         st.getConnection().close();

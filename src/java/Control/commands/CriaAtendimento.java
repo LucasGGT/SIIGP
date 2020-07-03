@@ -14,11 +14,14 @@ public class CriaAtendimento implements Command {
   
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        HttpSession sessao = request.getSession();
         AtendimentoDAO dao = new AtendimentoDAO();
- 
-        dao.setAtendimento(request.getParameter("nome"), request.getParameter("date"), request.getParameter("descricao"));
         
-        return "cadastro_atendimento.jsp";
+        String teste = (String)sessao.getAttribute("periciaID");
+        
+        dao.setAtendimento((String)sessao.getAttribute("periciaID"), request.getParameter("nome"), request.getParameter("date"), request.getParameter("descricao"));
+        
+        return "escolher_pericia.jsp";
     }
     
 }

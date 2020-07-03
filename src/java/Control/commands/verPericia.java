@@ -28,15 +28,4 @@ public class verPericia implements Command{
         return "ver_pericia.jsp";
     }
     
-    private Collection<Pericia> getPericia(HttpServletRequest request) {
-        HttpSession sessao = request.getSession();
-        Collection<Pericia> pericia = (Collection<Pericia>)sessao.getAttribute("Pericia");
-        
-        if(pericia == null) {
-            pericia = new ArrayList<Pericia>();
-            sessao.setAttribute("pericia", pericia);
-        }
-        
-        return pericia;
-    }
 }
