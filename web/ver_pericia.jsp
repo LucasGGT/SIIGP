@@ -51,6 +51,14 @@
                         
                         <td>${Pericia.local}</td>
                         
+                        <td>
+                            <form action="Servlet" method="post">
+                                <input type="hidden" name="acao" value="pagEditarPericia" />
+                                <input type="number" name="periciaID" placeholder="ID" hidden="true" value="${Pericia.id}"/>
+                                <input type="submit" placeholder="Editar" value="Editar"/>                         
+                            </form> 
+                       </td>
+                       
                     </tr>
                 </c:forEach>
             </tbody>

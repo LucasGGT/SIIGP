@@ -51,8 +51,19 @@ public class PericiaDAO {
         st.close();       
     }
     
-        public void verPericia(HttpServletRequest request) throws Exception{
+        public void editarPericia(String nome, String descricao, String conclusao, String local, String id) throws Exception {  
+        String sql = "UPDATE pericia SET nome = ?, descricao = ?, conclusao = ?, local = ? WHERE id = ? ";             
+        PreparedStatement st = criaStatement(sql);
+        st.setString(1, nome);
+        st.setString(2, descricao);
+        st.setString(3, conclusao);
+        st.setString(4, local);
+        st.setString(5, id);
+        
+        st.execute();
 
+        st.getConnection().close();
+        st.close();       
     }
     
     private PreparedStatement criaStatement(String sql) throws Exception {

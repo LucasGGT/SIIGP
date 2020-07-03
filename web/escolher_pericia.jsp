@@ -23,7 +23,7 @@
 
         <h2>Cadastro de Atendimento</h2>
 
-       <h1>Escolha uma Pericias</h1>
+       <h1>Escolha uma Pericia</h1>
         <br /> <br />
         
         <table class="table table-striped table-hover">

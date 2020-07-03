@@ -19,6 +19,9 @@
             </nav>
             <p>(Em desenvolvimento)</p>
         </div>
+        
+        <h2>Visualização de Atendimentos</h2>
+        
          <h1>Atendimentos</h1>
         <h2>Quantidade de atendimentos: ${Atendimentos.size()}</h2>
 
