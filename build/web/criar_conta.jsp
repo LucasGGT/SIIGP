@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>SIIGP</title>
     </head>
     <body>
             <c:if test="${logado}">
@@ -21,6 +21,7 @@
                     <input type="hidden" name="acao" value="CriarConta" />
                     <input type="text" name="usuario" placeholder="Usuário" /> <br /> <br />
                     <input type="password" name="senha" placeholder="Senha" /> <br /> <br />
+                    <input type="text" name="nome" placeholder="Nome" /> <br /> <br />
                     <input type="text" name="descricao" placeholder="Descrição" /> <br /> <br />
                     <input id="date" type="date" name="data_nascimento" > <br /> <br />
                     <input type="submit" placeholder="Criar Conta" value="Criar Conta"/>

@@ -20,10 +20,11 @@ public class PeritoDAO {
             int id = res.getInt("id");
             String usuario = res.getString("usuario");
             String senha = res.getString("senha");
+            String nome = res.getString("nome");
             String descricao = res.getString("descricao");
             Date data_nascimento = res.getDate("data_nascimento");
             
-            conta = new Perito(id, usuario, senha, descricao, data_nascimento);
+            conta = new Perito(id, usuario, senha, nome, descricao, data_nascimento);
         }
         
         st.getConnection().close();
@@ -44,19 +45,20 @@ public class PeritoDAO {
     }
     
     
-    public void criaConta(String usuario,String senha,String descricao,String data_nascimento) throws Exception {  
-        String sql = "insert into perito(usuario, senha, descricao, data_nascimento) values (?, ?, ?, ?)";               
+    public void criaConta(String usuario,String senha,String nome, String descricao,String data_nascimento) throws Exception {  
+        String sql = "insert into perito(usuario, senha, nome, descricao, data_nascimento) values (?, ?, ?, ?, ?)";               
         
         PreparedStatement st = criaStatement(sql);
         
         st.setString(1, usuario);
         st.setString(2, senha);
-        st.setString(3, descricao);
+        st.setString(3, nome);
+        st.setString(4, descricao);
         
         if("".equals(data_nascimento))
-            st.setNull(4,0);
+            st.setNull(5,0);
         else
-            st.setString(4, data_nascimento);
+            st.setString(5, data_nascimento);
         
         st.execute();
         

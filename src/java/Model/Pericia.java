@@ -8,7 +8,7 @@ public class Pericia {
     private String local;
    
     
-    public Pericia(int id, String nome, String conclusao, String local, String descricao) {
+    public Pericia(int id, String nome, String descricao, String conclusao, String local) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;

@@ -18,8 +18,9 @@ public class CriaAtendimento implements Command {
         AtendimentoDAO dao = new AtendimentoDAO();
         
         String teste = (String)sessao.getAttribute("periciaID");
+        int perito = (int)sessao.getAttribute("peritoID");
         
-        dao.setAtendimento((String)sessao.getAttribute("periciaID"), request.getParameter("nome"), request.getParameter("date"), request.getParameter("descricao"));
+        dao.setAtendimento((String)sessao.getAttribute("periciaID"), perito, request.getParameter("date"), request.getParameter("descricao"));
         
         return "escolher_pericia.jsp";
     }

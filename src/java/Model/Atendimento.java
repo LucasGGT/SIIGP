@@ -5,14 +5,14 @@ import java.util.Date;
 public class Atendimento {
     private int id;
     private int pericia_id;
-    private String perito;
+    private int perito_id;
     private Date data;
     private String descricao;
     
-    public Atendimento(int id,int pericia_id, String p, Date data, String descricao) {
+    public Atendimento(int id,int pericia_id, int p, Date data, String descricao) {
         this.id = id;
         this.pericia_id = pericia_id;
-        this.perito = p;
+        this.perito_id = p;
         this.data = data;
         this.descricao = descricao;
     }
@@ -32,12 +32,12 @@ public class Atendimento {
         this.pericia_id = pericia_id;
     }
     
-    public String getPerito() {
-        return perito;
+    public int getPerito() {
+        return perito_id;
     }
 
-    public void setPerito(String perito) {
-        this.perito = perito;
+    public void setPerito(int perito_id) {
+        this.perito_id = perito_id;
     }
 
     public Date getData() {

@@ -4,20 +4,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nome da Aplicação</title>
+        <title>SIIGP</title>
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <div>
             <nav>
                 <ul>
+                    <li><a href="Servlet?acao=pagInicio">Inicio</a></li>
                     <li><a href="Servlet?acao=EscolherPericia">Cadastro de atendimento</a></li>
                     <li><a href="Servlet?acao=CadastroPericia">Cadastro de perícia</a></li>
                     <li><a href="Servlet?acao=verAtendimento">Ver atendimento</a></li>
                     <li><a href="Servlet?acao=verPericia">Ver perícia</a></li>
                 </ul>
             </nav>
-            <p>(Em desenvolvimento)</p>
         </div>
         
         <h2>Visualização de Atendimentos</h2>
@@ -32,7 +32,6 @@
                 <tr>
                     <th>Id</th>
                     <th>Id da Pericia</th>
-                    <th>Perito</th>
                     <th>Data</th>
                     <th>Descricao</th>
                 </tr>
@@ -42,9 +41,7 @@
                     <tr>
                         <td>${atendimento.id}</td>
                         
-                        <td>${atendimento.pericia_id}</td>     
-                      
-                        <td>${atendimento.perito}</td>
+                        <td>${atendimento.pericia_id}</td>               
 
                         <td>${atendimento.data}</td>
                         

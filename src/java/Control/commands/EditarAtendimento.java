@@ -13,7 +13,7 @@ public class EditarAtendimento implements Command{
        HttpSession sessao = request.getSession();
        AtendimentoDAO dao = new AtendimentoDAO();
        
-       dao.editarAtendimento(request.getParameter("nome"), request.getParameter("date"), request.getParameter("descricao"),(String)sessao.getAttribute("atendimentoID"));
+       dao.editarAtendimento(request.getParameter("date"), request.getParameter("descricao"),(String)sessao.getAttribute("atendimentoID"));
        dao.getAtendimentos(request);
        
        return "ver_atendimento.jsp";

@@ -15,7 +15,7 @@ public class CriarConta implements Command {
          
         if(peritoDAO.usuarioExistente(request.getParameter("usuario")) == false){
         
-            peritoDAO.criaConta(request.getParameter("usuario"), request.getParameter("senha"), 
+            peritoDAO.criaConta(request.getParameter("usuario"), request.getParameter("senha"),request.getParameter("nome"), 
                                 request.getParameter("descricao"), request.getParameter("data_nascimento"));
             
             sessao.setAttribute("erro", ""); 

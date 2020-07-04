@@ -4,20 +4,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nome da Aplicação</title>
+        <title>SIIGP</title>
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <div>
             <nav>
                 <ul>
+                    <li><a href="Servlet?acao=pagInicio">Inicio</a></li>
                     <li><a href="Servlet?acao=EscolherPericia">Cadastro de atendimento</a></li>
                     <li><a href="Servlet?acao=CadastroPericia">Cadastro de perícia</a></li>
                     <li><a href="Servlet?acao=verAtendimento">Ver atendimento</a></li>
                     <li><a href="Servlet?acao=verPericia">Ver perícia</a></li>
                 </ul>
             </nav>
-            <p>(Em desenvolvimento)</p>
         </div>
         
         <h2>Cadastro de Perícia</h2>
