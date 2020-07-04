@@ -56,7 +56,6 @@ public class AtendimentoDAO {
         st.close();       
     }
     
-    
     public void editarAtendimento(String data, String descricao, String id) throws Exception {
         String sql = "UPDATE atendimento SET data = ?, descricao = ? WHERE id = ? ";     
         PreparedStatement st = criaStatement(sql);

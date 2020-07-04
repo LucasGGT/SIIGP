@@ -2,6 +2,7 @@ package Control.commands;
 
 import Control.Command;
 import Persistencia.AtendimentoDAO;
+import Persistencia.RelatorioDAO;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,9 @@ public class CriaAtendimento implements Command {
         int perito = (int)sessao.getAttribute("peritoID");
         
         dao.setAtendimento((String)sessao.getAttribute("periciaID"), perito, request.getParameter("date"), request.getParameter("descricao"));
+        
+        RelatorioDAO relatorioDAO = new RelatorioDAO();
+        relatorioDAO.setRelatorio("Atendimento Criado","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
         
         return "escolher_pericia.jsp";
     }

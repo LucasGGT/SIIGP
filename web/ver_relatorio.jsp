@@ -25,14 +25,33 @@
             </nav>
         </div>
         
-        <div style="padding-top: 200px;">
-            <h1 style="text-align: center;">
-                S.I.I.G.P
-            </h1>
-             <h1 style="text-align: center;">
-                Sistema Integrado do Instituto Geral de Perícias
-            </h1>
-        </div>
-
+        <h2>Relatórios</h2>
+        
+        <br /> <br />
+        
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                    <th>Informação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${Relatorios}" var="relatorio">
+                    <tr>
+                        <td>${relatorio.id}</td>
+                        
+                        <td>${relatorio.timestamp}</td>               
+                        
+                        <td>${relatorio.acao}</td>
+                        
+                        <td>${relatorio.informacao}</td> 
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+        
     </body>
 </html>

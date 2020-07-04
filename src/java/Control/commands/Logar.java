@@ -21,6 +21,7 @@ public class Logar implements Command {
             if(request.getAttribute("logado") == null){
                 sessao.setAttribute("logado", true);
                 sessao.setAttribute("peritoID", conta.getId());
+                sessao.setAttribute("peritoNome", conta.getNome());
                 sessao.setAttribute("conta", conta);
                 
                 sessao.setAttribute("erro", "");
