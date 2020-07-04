@@ -1,9 +1,4 @@
-<%-- 
-    Document   : editar_atendimento
-    Created on : 18/05/2020, 12:25:17
-    Author     : 6833381
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

@@ -1,28 +1,30 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nome da Aplicação</title>
-        <link rel="stylesheet" href="style.css"/>
+        <title>Login</title>
     </head>
     <body>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="Servlet?acao=EscolherPericia">Cadastro de atendimento</a></li>
-                    <li><a href="Servlet?acao=CadastroPericia">Cadastro de perícia</a></li>
-                    <li><a href="Servlet?acao=verAtendimento">Ver atendimento</a></li>
-                    <li><a href="Servlet?acao=verPericia">Ver perícia</a></li>
-                </ul>
-            </nav>
-            <p>(Em desenvolvimento)</p>
-        </div>
-        
-        <div style="padding-top: 200px;">
-            <h1 style="text-align: center;">
-                Nome da aplicação!
-            </h1>
-        </div>
+            <c:if test="${logado}">
+                <h2 style="color: red;">Já está logado!</h2>
+                <br /> <br />
+                <a href="Servlet?acao=Inicio">Voltar</a>
+            </c:if>
+            <c:if test="${!logado}" >
+                    
+                    <h1>${erro}</h1>
+                    <h1>Login</h1>
+                    
+                    <form action="Servlet" method="post">
+                        <input type="hidden" name="acao" value="Logar" />
+                        <input type="text" name="usuario" placeholder="Usuário" /> <br /> <br />
+                        <input type="password" name="senha" placeholder="Senha" /> <br /> <br />
+                        <input type="submit" placeholder="Logar" value="Entrar"/>
+                    </form>
+                    <a href="Servlet?acao=pagCriarConta">Criar Conta</a>
+                    
+            </c:if>
     </body>
 </html>

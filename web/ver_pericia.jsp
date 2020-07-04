@@ -42,13 +42,9 @@
                 <c:forEach items="${Pericias}" var="Pericia">
                     <tr>
                         <td>${Pericia.id}</td>
-
                         <td>${Pericia.nome}</td>
-
                         <td>${Pericia.descricao}</td>
-                        
                         <td>${Pericia.conclusao}</td>
-                        
                         <td>${Pericia.local}</td>
                         
                         <td>

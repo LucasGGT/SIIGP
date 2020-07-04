@@ -20,20 +20,10 @@
             <p>(Em desenvolvimento)</p>
         </div>
         
-        <h2>Cadastro de Perícia</h2>
-        
-        <form action="Servlet" method="post">
-            <input type="hidden" name="acao" value="CriaPericia" />
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" placeholder="Nome do Perito" /> <br /> <br />
-            <label for="descricao">Descrição: </label>
-            <input type="text" name="descricao" placeholder="Descrição" /> <br /> <br />
-            <label for="conclusao">Conclusão: </label>
-            <input type="text" name="conclusao" placeholder="Conclusão" /> <br /> <br />
-            <label for="local">Local: </label>
-            <input type="text" name="local" placeholder="Local" /> <br /> <br />
-            <input type="submit" placeholder="Criar" value="Criar"/>
-        </form>
-        
+        <div style="padding-top: 200px;">
+            <h1 style="text-align: center;">
+                Nome da aplicação!
+            </h1>
+        </div>
     </body>
 </html>
