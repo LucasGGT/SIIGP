@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Jul-2020 às 00:36
+-- Tempo de geração: 05-Jul-2020 às 16:33
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.11
 
@@ -36,20 +36,6 @@ CREATE TABLE `atendimento` (
   `descricao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `atendimento`
---
-
-INSERT INTO `atendimento` (`id`, `pericia_id`, `perito_id`, `data`, `descricao`) VALUES
-(7, 11, 6, '2020-07-22', 'a'),
-(8, 12, 6, '2020-07-22', 'aass'),
-(9, 12, 6, '2020-07-28', 'noss'),
-(10, 10, 6, '2020-07-17', 'asda'),
-(11, 12, 6, '2020-07-08', 'a'),
-(12, 12, 6, '2020-07-22', 'a'),
-(13, 12, 6, '2020-07-23', 'a'),
-(14, 12, 6, '2020-01-01', '1111');
-
 -- --------------------------------------------------------
 
 --
@@ -59,7 +45,7 @@ INSERT INTO `atendimento` (`id`, `pericia_id`, `perito_id`, `data`, `descricao`)
 CREATE TABLE `pericia` (
   `id` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
-  `descricao` varchar(100) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
   `conclusao` varchar(50) NOT NULL,
   `local` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -69,10 +55,7 @@ CREATE TABLE `pericia` (
 --
 
 INSERT INTO `pericia` (`id`, `nome`, `descricao`, `conclusao`, `local`) VALUES
-(10, 'a', 'a', 'a', 'a'),
-(11, 'a', 'a', 'a', 'a'),
-(12, 'Alexandre', 'Teste', 'con', 'Rio'),
-(13, 't', 't', 't', 't');
+(21, 'a', 'a', 'Concluido', 'a');
 
 -- --------------------------------------------------------
 
@@ -82,10 +65,10 @@ INSERT INTO `pericia` (`id`, `nome`, `descricao`, `conclusao`, `local`) VALUES
 
 CREATE TABLE `perito` (
   `id` int(11) NOT NULL,
-  `usuario` varchar(15) NOT NULL,
-  `senha` varchar(15) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `senha` varchar(20) NOT NULL,
   `nome` varchar(50) NOT NULL,
-  `descricao` varchar(50) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
   `data_nascimento` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -94,8 +77,6 @@ CREATE TABLE `perito` (
 --
 
 INSERT INTO `perito` (`id`, `usuario`, `senha`, `nome`, `descricao`, `data_nascimento`) VALUES
-(5, 'novo', '1234', 'a', 'a', NULL),
-(6, 'a', 'a', 'a', 'a', NULL),
 (7, 'b', 'b', 'b', 'b', '2020-07-21');
 
 -- --------------------------------------------------------
@@ -116,11 +97,22 @@ CREATE TABLE `relatorio` (
 --
 
 INSERT INTO `relatorio` (`id`, `timestamp`, `acao`, `informacao`) VALUES
-(2, '2020-07-04 22:16:27', 'Atendimento Criado', 'asdasdasd'),
-(3, '2020-07-04 22:18:45', 'Atendimento Criado', 'ID: 6 | Nome: a'),
-(4, '2020-07-04 22:21:04', 'Pericia Criada', 'ID: 6 | Nome: a'),
-(5, '2020-07-04 22:23:30', 'Atendimento Editado', 'ID: 6 | Nome: a'),
-(6, '2020-07-04 22:24:06', 'Pericia Editada', 'ID: 6 | Nome: a');
+(42, '2020-07-05 03:14:53', 'Pericia Removida', 'ID: null | Nome: a'),
+(43, '2020-07-05 03:14:53', 'Pericia Removida', 'ID: null | Nome: a'),
+(44, '2020-07-05 03:14:54', 'Pericia Removida', 'ID: null | Nome: a'),
+(45, '2020-07-05 03:14:54', 'Pericia Removida', 'ID: null | Nome: a'),
+(46, '2020-07-05 03:14:54', 'Pericia Removida', 'ID: null | Nome: a'),
+(47, '2020-07-05 03:17:11', 'Pericia Criada', 'ID: 6 | Nome: a'),
+(48, '2020-07-05 03:17:15', 'Pericia Removida', 'ID: null | Nome: a'),
+(49, '2020-07-05 03:18:03', 'Pericia Criada', 'ID: 6 | Nome: a'),
+(50, '2020-07-05 03:18:16', 'Atendimento Criado', 'ID: 6 | Nome: a'),
+(51, '2020-07-05 03:18:20', 'Atendimento Removido', 'ID: null | Nome: a'),
+(52, '2020-07-05 03:18:22', 'Pericia Removida', 'ID: 19 | Nome: a'),
+(53, '2020-07-05 03:26:54', 'Pericia Criada', 'ID: 6 | Nome: a'),
+(54, '2020-07-05 03:27:08', 'Atendimento Criado', 'ID: 6 | Nome: a'),
+(55, '2020-07-05 03:27:19', 'Atendimento Removido', 'ID: 6 | Nome: a'),
+(56, '2020-07-05 03:27:27', 'Pericia Removida', 'ID: 6 | Nome: a'),
+(57, '2020-07-05 03:32:54', 'Pericia Criada', 'ID: 6 | Nome: a');
 
 --
 -- Índices para tabelas despejadas
@@ -160,13 +152,13 @@ ALTER TABLE `relatorio`
 -- AUTO_INCREMENT de tabela `atendimento`
 --
 ALTER TABLE `atendimento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `pericia`
 --
 ALTER TABLE `pericia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `perito`
@@ -178,7 +170,7 @@ ALTER TABLE `perito`
 -- AUTO_INCREMENT de tabela `relatorio`
 --
 ALTER TABLE `relatorio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- Restrições para despejos de tabelas

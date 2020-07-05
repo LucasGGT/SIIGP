@@ -11,7 +11,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="text-center">
             <c:if test="${logado}">
                 <h2 style="color: red;">Já está logado!</h2>
                 <br /> <br />
@@ -23,12 +23,12 @@
                     
                 <form action="Servlet" method="post">
                     <input type="hidden" name="acao" value="CriarConta" />
-                    <input type="text" name="usuario" placeholder="Usuário" required="required"/> <br /> <br />
-                    <input type="password" name="senha" placeholder="Senha" required="required"/> <br /> <br />
-                    <input type="text" name="nome" placeholder="Nome" required="required"/> <br /> <br />
-                    <input type="text" name="descricao" placeholder="Descrição" required="required"/> <br /> <br />
+                    <input type="text" name="usuario" placeholder="Usuário" required="required" maxlength="50"/> <br /> <br />
+                    <input type="password" name="senha" placeholder="Senha" required="required" maxlength="20"/> <br /> <br />
+                    <input type="text" name="nome" placeholder="Nome" required="required" maxlength="50"/> <br /> <br />
+                    <input type="text" name="descricao" placeholder="Descrição" required="required" maxlength="255"/> <br /> <br />
                     <input id="date" type="date" name="data_nascimento" required="required"> <br /> <br />
-                    <input type="submit" placeholder="Criar Conta" value="Criar Conta"/>
+                    <input type="submit" placeholder="Criar Conta" value="Criar Conta" />
                 </form>
                 <a href="Servlet?acao=pagIndex">Voltar</a>
                     

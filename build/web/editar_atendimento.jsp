@@ -11,7 +11,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="text-center">
     <c:if test="${logado}">
 
         <div>
@@ -35,7 +35,7 @@
             <label for="data">Data: </label>
             <input id="date" type="date" name="date" required="required"> <br /> <br />
             <label for="descricao">Descrição: </label>
-            <input type="text" name="descricao" placeholder="Descrição" required="required"/> <br /> <br />
+            <input type="text" name="descricao" placeholder="Descrição" required="required" maxlength="255"/> <br /> <br />
             <input type="submit" placeholder="Editar" value="Editar"/>
         </form>
     </c:if>
