@@ -23,6 +23,7 @@
                     <li><a href="Servlet?acao=verAtendimento">Ver atendimento</a></li>
                     <li><a href="Servlet?acao=verPericia">Ver perícia</a></li>
                     <li><a href="Servlet?acao=verRelatorio">Relatórios</a></li>
+                    <li><a href="Servlet?acao=Logout">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,6 +63,14 @@
                                 <input type="hidden" name="acao" value="pagEditarPericia" />
                                 <input type="number" name="periciaID" placeholder="ID" hidden="true" value="${pericia.id}"/>
                                 <input type="submit" placeholder="Editar" value="Editar"/>                         
+                            </form> 
+                        </td>
+                        
+                        <td>
+                            <form action="Servlet" method="post">
+                                <input type="hidden" name="acao" value="RemoverPericia" />
+                                <input type="number" name="periciaID" placeholder="ID" hidden="true" value="${pericia.id}"/>
+                                <input type="submit" placeholder="Remover" value="Remover"/>                         
                             </form> 
                         </td>
                         

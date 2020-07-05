@@ -62,7 +62,18 @@ public class PericiaDAO {
         st.close();       
     }
     
-        public void editarPericia(String nome, String descricao, String conclusao, String local, String id) throws Exception {  
+    public void removePericia(String id) throws Exception {
+        String sql = "delete from pericia where id = ?;";      
+        PreparedStatement st = criaStatement(sql);
+        st.setString(1, id);
+        
+        st.execute();
+        
+        st.getConnection().close();
+        st.close();
+    }
+    
+    public void editarPericia(String nome, String descricao, String conclusao, String local, String id) throws Exception {  
         String sql = "UPDATE pericia SET nome = ?, descricao = ?, conclusao = ?, local = ? WHERE id = ? ";             
         PreparedStatement st = criaStatement(sql);
         st.setString(1, nome);

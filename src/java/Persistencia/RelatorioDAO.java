@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 public class RelatorioDAO {
  
     public void getRelatorio(HttpServletRequest request) throws Exception {       
-        String sql = "select * from relatorio";
+        String sql = "select * from relatorio order by id desc";
         
         PreparedStatement st = criaStatement(sql);
         

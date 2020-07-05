@@ -56,6 +56,17 @@ public class AtendimentoDAO {
         st.close();       
     }
     
+    public void removeAtendimento(String id) throws Exception {
+        String sql = "delete from atendimento where id = ?;";      
+        PreparedStatement st = criaStatement(sql);
+        st.setString(1, id);
+        
+        st.execute();
+        
+        st.getConnection().close();
+        st.close();
+    }
+    
     public void editarAtendimento(String data, String descricao, String id) throws Exception {
         String sql = "UPDATE atendimento SET data = ?, descricao = ? WHERE id = ? ";     
         PreparedStatement st = criaStatement(sql);
