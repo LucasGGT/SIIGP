@@ -13,19 +13,19 @@
     </head>
     <body>
             <c:if test="${logado}">
-                <h2 style="color: red;">Já está logado!</h2>
+                <h6 style="color: red;">Já está logado!</h6>
                 <br /> <br />
                 <a href="Servlet?acao=Inicio">Voltar</a>
             </c:if>
             <c:if test="${!logado}" >
                     
-                    <h1>${erro}</h1>
+                    <h6 style="color: red;">${erro}</h6>
                     <h1>Login</h1>
                     
                     <form action="Servlet" method="post">
                         <input type="hidden" name="acao" value="Logar" />
-                        <input type="text" name="usuario" placeholder="Usuário" /> <br /> <br />
-                        <input type="password" name="senha" placeholder="Senha" /> <br /> <br />
+                        <input type="text" name="usuario" placeholder="Usuário" required="required"/> <br /> <br />
+                        <input type="password" name="senha" placeholder="Senha" required="required"/> <br /> <br />
                         <input type="submit" placeholder="Logar" value="Entrar"/>
                     </form>
                     <a href="Servlet?acao=pagCriarConta">Criar Conta</a>

@@ -12,6 +12,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     </head>
     <body>
+    <c:if test="${logado}">
+
         <div>
             <nav>
                 <ul>
@@ -33,6 +35,6 @@
                 Sistema Integrado do Instituto Geral de Perícias
             </h1>
         </div>
-
+    </c:if>
     </body>
 </html>

@@ -12,6 +12,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     </head>
     <body>
+    <c:if test="${logado}">
         <div>
             <nav>
                 <ul>
@@ -25,20 +26,22 @@
             </nav>
         </div>
         
+        <h6 style="color: red;">${erro}</h6>
+        
         <h2>Cadastro de Perícia</h2>
         
         <form action="Servlet" method="post">
             <input type="hidden" name="acao" value="CriaPericia" />
             <label for="nome">Nome: </label>
-            <input type="text" name="nome" placeholder="Nome do Perito" /> <br /> <br />
+            <input type="text" name="nome" placeholder="Nome do Perito" required="required"/> <br /> <br />
             <label for="descricao">Descrição: </label>
-            <input type="text" name="descricao" placeholder="Descrição" /> <br /> <br />
+            <input type="text" name="descricao" placeholder="Descrição" required="required"/> <br /> <br />
             <label for="conclusao">Conclusão: </label>
-            <input type="text" name="conclusao" placeholder="Conclusão" /> <br /> <br />
+            <input type="text" name="conclusao" placeholder="Conclusão" required="required"/> <br /> <br />
             <label for="local">Local: </label>
-            <input type="text" name="local" placeholder="Local" /> <br /> <br />
+            <input type="text" name="local" placeholder="Local" required="required"/> <br /> <br />
             <input type="submit" placeholder="Criar" value="Criar"/>
         </form>
-        
+    </c:if>
     </body>
 </html>

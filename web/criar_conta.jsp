@@ -19,19 +19,18 @@
             </c:if>
             <c:if test="${!logado}" >
                     
-                    <h1>${erro}</h1>
                     <h1>Criar Conta</h1>
                     
                 <form action="Servlet" method="post">
                     <input type="hidden" name="acao" value="CriarConta" />
-                    <input type="text" name="usuario" placeholder="Usuário" /> <br /> <br />
-                    <input type="password" name="senha" placeholder="Senha" /> <br /> <br />
-                    <input type="text" name="nome" placeholder="Nome" /> <br /> <br />
-                    <input type="text" name="descricao" placeholder="Descrição" /> <br /> <br />
-                    <input id="date" type="date" name="data_nascimento" > <br /> <br />
+                    <input type="text" name="usuario" placeholder="Usuário" required="required"/> <br /> <br />
+                    <input type="password" name="senha" placeholder="Senha" required="required"/> <br /> <br />
+                    <input type="text" name="nome" placeholder="Nome" required="required"/> <br /> <br />
+                    <input type="text" name="descricao" placeholder="Descrição" required="required"/> <br /> <br />
+                    <input id="date" type="date" name="data_nascimento" required="required"> <br /> <br />
                     <input type="submit" placeholder="Criar Conta" value="Criar Conta"/>
                 </form>
-                <a href="Servlet?acao=PagLogin">Voltar</a>
+                <a href="Servlet?acao=pagIndex">Voltar</a>
                     
             </c:if>
     </body>

@@ -12,7 +12,7 @@ public class CadastroAtendimento implements Command {
         
         HttpSession sessao = request.getSession();
         sessao.setAttribute("periciaID", request.getParameter("periciaID"));   
-        
+        sessao.setAttribute("erro", "");
         return "cadastro_atendimento.jsp";
     }   
 }

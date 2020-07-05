@@ -36,6 +36,17 @@ public class PericiaDAO {
         sessao.setAttribute("Pericias", pericias);
     }
  
+    public int countPericia() throws Exception {
+       String sql = "select count(id) as variavel from pericia";       
+                
+        PreparedStatement st = criaStatement(sql);
+        
+        ResultSet res = st.executeQuery();
+        res.next();
+        
+        return res.getInt("variavel");
+    }
+    
     public void setPericia(String nome, String descricao, String conclusao, String local) throws Exception {
         String sql = "insert into pericia(nome, descricao, conclusao, local) values(?, ?, ?, ?)";       
                 
