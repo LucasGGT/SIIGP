@@ -17,7 +17,7 @@ public class RemoverPericia implements Command{
         dao.removePericia(request.getParameter("periciaID"));
         
         RelatorioDAO relatorioDAO = new RelatorioDAO();
-        relatorioDAO.setRelatorio("Pericia Removida","ID: " + sessao.getAttribute("periciaID") + " | Nome: " + sessao.getAttribute("peritoNome"));
+        relatorioDAO.setRelatorio("Pericia Removida","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
           
         dao.getPericias(request);
         

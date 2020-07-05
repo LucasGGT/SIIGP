@@ -17,7 +17,7 @@ public class RemoverAtendimento implements Command{
         dao.removeAtendimento(request.getParameter("atendimentoID"));
         
         RelatorioDAO relatorioDAO = new RelatorioDAO();
-        relatorioDAO.setRelatorio("Atendimento Removido","ID: " + sessao.getAttribute("atendimentoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
+        relatorioDAO.setRelatorio("Atendimento Removido","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
         
         dao.getAtendimentos(request);
         
