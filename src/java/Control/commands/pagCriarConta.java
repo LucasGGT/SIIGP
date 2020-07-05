@@ -9,8 +9,9 @@ public class pagCriarConta  implements Command{
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        HttpSession sessao = request.getSession();   
-        sessao.setAttribute("erro", "");
+        HttpSession sessao = request.getSession();
+        sessao.setAttribute("erro", "");    
+        sessao.setAttribute("mensagem", "");
         return "criar_conta.jsp";
     }
     

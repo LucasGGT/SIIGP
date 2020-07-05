@@ -15,6 +15,7 @@ public class EscolherPericia implements Command {
         PericiaDAO dao = new PericiaDAO();
         
         if(dao.countPericia() != 0){
+            sessao.setAttribute("erro", "");
             dao.getPericias(request);
             return "escolher_pericia.jsp";
         }

@@ -28,6 +28,7 @@
             </nav>
         </div>
         
+        <h6 style="color: green;">${mensagem}</h6>
 
         <h2>Cadastro de Atendimento</h2>
 

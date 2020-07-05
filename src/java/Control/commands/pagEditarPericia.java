@@ -9,8 +9,10 @@ public class pagEditarPericia implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-                
+        
         HttpSession sessao = request.getSession();
+        sessao.setAttribute("erro", "");  
+        sessao.setAttribute("mensagem", "");
         sessao.setAttribute("periciaID", request.getParameter("periciaID"));   
         return "editar_pericia.jsp";
         

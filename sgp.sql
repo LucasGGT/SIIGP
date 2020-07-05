@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Jul-2020 às 16:33
+-- Tempo de geração: 05-Jul-2020 às 23:44
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.11
 
@@ -50,13 +50,6 @@ CREATE TABLE `pericia` (
   `local` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `pericia`
---
-
-INSERT INTO `pericia` (`id`, `nome`, `descricao`, `conclusao`, `local`) VALUES
-(21, 'a', 'a', 'Concluido', 'a');
-
 -- --------------------------------------------------------
 
 --
@@ -77,7 +70,8 @@ CREATE TABLE `perito` (
 --
 
 INSERT INTO `perito` (`id`, `usuario`, `senha`, `nome`, `descricao`, `data_nascimento`) VALUES
-(7, 'b', 'b', 'b', 'b', '2020-07-21');
+(7, 'b', 'b', 'b', 'b', '2020-07-21'),
+(8, 'Frech', '12345', 'Frech', 'Perito', '1998-05-07');
 
 -- --------------------------------------------------------
 
@@ -112,7 +106,23 @@ INSERT INTO `relatorio` (`id`, `timestamp`, `acao`, `informacao`) VALUES
 (54, '2020-07-05 03:27:08', 'Atendimento Criado', 'ID: 6 | Nome: a'),
 (55, '2020-07-05 03:27:19', 'Atendimento Removido', 'ID: 6 | Nome: a'),
 (56, '2020-07-05 03:27:27', 'Pericia Removida', 'ID: 6 | Nome: a'),
-(57, '2020-07-05 03:32:54', 'Pericia Criada', 'ID: 6 | Nome: a');
+(57, '2020-07-05 03:32:54', 'Pericia Criada', 'ID: 6 | Nome: a'),
+(58, '2020-07-05 20:50:42', 'Pericia Removida', 'ID: 7 | Nome: b'),
+(59, '2020-07-05 20:52:32', 'Pericia Criada', 'ID: 7 | Nome: b'),
+(60, '2020-07-05 21:32:53', 'Atendimento Criado', 'ID: 7 | Nome: b'),
+(61, '2020-07-05 21:33:05', 'Pericia Criada', 'ID: 7 | Nome: b'),
+(62, '2020-07-05 21:33:28', 'Atendimento Editado', 'ID: 7 | Nome: b'),
+(63, '2020-07-05 21:33:43', 'Pericia Editada', 'ID: 7 | Nome: b'),
+(64, '2020-07-05 21:33:57', 'Pericia Criada', 'ID: 7 | Nome: b'),
+(65, '2020-07-05 21:36:55', 'Atendimento Criado', 'ID: 7 | Nome: b'),
+(66, '2020-07-05 21:37:04', 'Pericia Criada', 'ID: 7 | Nome: b'),
+(67, '2020-07-05 21:37:16', 'Atendimento Editado', 'ID: 7 | Nome: b'),
+(68, '2020-07-05 21:37:24', 'Pericia Editada', 'ID: 7 | Nome: b'),
+(69, '2020-07-05 21:38:47', 'Atendimento Criado', 'ID: 7 | Nome: b'),
+(70, '2020-07-05 21:42:30', 'Pericia Removida', 'ID: 7 | Nome: b'),
+(71, '2020-07-05 21:42:30', 'Pericia Removida', 'ID: 7 | Nome: b'),
+(72, '2020-07-05 21:42:31', 'Pericia Removida', 'ID: 7 | Nome: b'),
+(73, '2020-07-05 21:42:32', 'Pericia Removida', 'ID: 7 | Nome: b');
 
 --
 -- Índices para tabelas despejadas
@@ -152,25 +162,25 @@ ALTER TABLE `relatorio`
 -- AUTO_INCREMENT de tabela `atendimento`
 --
 ALTER TABLE `atendimento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `pericia`
 --
 ALTER TABLE `pericia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `perito`
 --
 ALTER TABLE `perito`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `relatorio`
 --
 ALTER TABLE `relatorio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- Restrições para despejos de tabelas

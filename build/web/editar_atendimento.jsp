@@ -27,7 +27,7 @@
                 </ul>
             </nav>
         </div>
-        
+        <h6 style="color: green;">${mensagem}</h6>
         <h2>Editar Atendimento: ${atendimentoID}</h2>
         
         <form action="Servlet" method="post">

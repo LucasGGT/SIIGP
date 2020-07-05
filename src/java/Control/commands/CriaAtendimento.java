@@ -26,6 +26,8 @@ public class CriaAtendimento implements Command {
         RelatorioDAO relatorioDAO = new RelatorioDAO();
         relatorioDAO.setRelatorio("Atendimento Criado","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
         
+        sessao.setAttribute("mensagem", "Cadastro Salvo.");
+        
         return "escolher_pericia.jsp";
     }
     

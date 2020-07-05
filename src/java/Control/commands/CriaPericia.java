@@ -18,7 +18,9 @@ public class CriaPericia implements Command {
         
         RelatorioDAO relatorioDAO = new RelatorioDAO();
         relatorioDAO.setRelatorio("Pericia Criada","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
-              
+        
+        sessao.setAttribute("mensagem", "Cadastro Salvo.");
+        
         return "cadastro_pericia.jsp";
     } 
 }

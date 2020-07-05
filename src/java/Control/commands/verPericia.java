@@ -25,6 +25,10 @@ public class verPericia implements Command{
         PericiaDAO dao = new PericiaDAO();
         dao.getPericias(request);
         
+        HttpSession sessao = request.getSession();
+        sessao.setAttribute("erro", "");
+        sessao.setAttribute("mensagem", "");
+        
         return "ver_pericia.jsp";
     }
     

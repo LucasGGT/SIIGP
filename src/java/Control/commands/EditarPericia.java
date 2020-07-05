@@ -20,7 +20,7 @@ public class EditarPericia implements Command{
        RelatorioDAO relatorioDAO = new RelatorioDAO();
        relatorioDAO.setRelatorio("Pericia Editada","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
            
-       
+       sessao.setAttribute("mensagem", "Edição Salva.");
        return "ver_pericia.jsp";
     }
     

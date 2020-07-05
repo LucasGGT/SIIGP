@@ -28,12 +28,13 @@
         </div>
         
         <h6 style="color: red;">${erro}</h6>
+        <h6 style="color: green;">${mensagem}</h6>
         
         <form action="Servlet" method="post">
             <h2>Cadastro de Perícia</h2>
             <input type="hidden" name="acao" value="CriaPericia" />
             <label for="nome">Nome: </label>
-            <input type="text" name="nome" placeholder="Nome do Perito" required="required" maxlength="50"/> <br /> <br />
+            <input type="text" name="nome" placeholder="Nome" required="required" maxlength="50"/> <br /> <br />
             <label for="descricao">Descrição: </label>
             <input type="text" name="descricao" placeholder="Descrição" required="required" maxlength="255"/> <br /> <br />
             <label for="conclusao">Conclusão: </label>

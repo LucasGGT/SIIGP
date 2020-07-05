@@ -12,6 +12,7 @@ public class pagInicio implements Command{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession sessao = request.getSession();
         sessao.setAttribute("erro", "");
+        sessao.setAttribute("mensagem", "");
         return "inicio.jsp";
     }
     

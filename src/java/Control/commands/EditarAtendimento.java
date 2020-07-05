@@ -21,7 +21,7 @@ public class EditarAtendimento implements Command{
        RelatorioDAO relatorioDAO = new RelatorioDAO();
        relatorioDAO.setRelatorio("Atendimento Editado","ID: " + sessao.getAttribute("peritoID") + " | Nome: " + sessao.getAttribute("peritoNome"));
            
-       
+       sessao.setAttribute("mensagem", "Edição Salva.");
        return "ver_atendimento.jsp";
     }
     

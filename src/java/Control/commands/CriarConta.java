@@ -18,7 +18,7 @@ public class CriarConta implements Command {
             peritoDAO.criaConta(request.getParameter("usuario"), request.getParameter("senha"),request.getParameter("nome"), 
                                 request.getParameter("descricao"), request.getParameter("data_nascimento"));
             
-            sessao.setAttribute("erro", ""); 
+            sessao.setAttribute("erro", "");        
             return "index.jsp";
         }
         else{

@@ -27,7 +27,7 @@
                 </ul>
             </nav>
         </div>
-        
+        <h6 style="color: green;">${mensagem}</h6>
         <h2>Visualização de Pericias</h2>
         
          <h1>Pericias</h1>
