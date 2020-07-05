@@ -26,7 +26,7 @@
                     <input type="text" name="usuario" placeholder="Usuário" required="required" maxlength="50"/> <br /> <br />
                     <input type="password" name="senha" placeholder="Senha" required="required" maxlength="20"/> <br /> <br />
                     <input type="text" name="nome" placeholder="Nome" required="required" maxlength="50"/> <br /> <br />
-                    <input type="text" name="descricao" placeholder="Descrição" required="required" maxlength="255"/> <br /> <br />
+                    <input type="text" name="descricao" placeholder="Cargo" required="required" maxlength="255"/> <br /> <br />
                     <input id="date" type="date" name="data_nascimento" required="required"> <br /> <br />
                     <input type="submit" placeholder="Criar Conta" value="Criar Conta" />
                 </form>
